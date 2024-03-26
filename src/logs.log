@@ -1,0 +1,129 @@
+06-03-2024 15:30:23 INFO     [_internal.py:96] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+06-03-2024 15:30:23 INFO     [_internal.py:96] [33mPress CTRL+C to quit[0m
+06-03-2024 15:30:23 INFO     [_internal.py:96]  * Restarting with stat
+06-03-2024 15:30:24 WARNING  [_internal.py:96]  * Debugger is active!
+06-03-2024 15:30:24 INFO     [_internal.py:96]  * Debugger PIN: 826-021-334
+06-03-2024 15:33:37 INFO     [_internal.py:96] 127.0.0.1 - - [06/Mar/2024 15:33:37] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+06-03-2024 15:35:39 INFO     [_internal.py:96]  * Detected change in 'C:\\Users\\dgupta\\OneDrive - WatchGuard Technologies Inc\\Desktop\\api\\src\\models\\database.py', reloading
+06-03-2024 15:35:39 INFO     [_internal.py:96]  * Restarting with stat
+06-03-2024 15:35:40 WARNING  [_internal.py:96]  * Debugger is active!
+06-03-2024 15:35:40 INFO     [_internal.py:96]  * Debugger PIN: 826-021-334
+06-03-2024 15:35:44 INFO     [_internal.py:96] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+06-03-2024 15:35:44 INFO     [_internal.py:96] [33mPress CTRL+C to quit[0m
+06-03-2024 15:35:44 INFO     [_internal.py:96]  * Restarting with stat
+06-03-2024 15:35:45 WARNING  [_internal.py:96]  * Debugger is active!
+06-03-2024 15:35:45 INFO     [_internal.py:96]  * Debugger PIN: 826-021-334
+06-03-2024 15:35:51 INFO     [authenticate.py:43] [REQMEJhE] : Valid login by user.
+06-03-2024 15:35:51 INFO     [authenticate.py:16] [REQMEJhE] : User logged in successfully.
+06-03-2024 15:35:51 INFO     [authenticate.py:23] [REQMEJhE] : Login route accessed by user.
+06-03-2024 15:35:51 INFO     [_internal.py:96] 127.0.0.1 - - [06/Mar/2024 15:35:51] "POST /login HTTP/1.1" 200 -
+06-03-2024 15:36:29 INFO     [_internal.py:96]  * Detected change in 'C:\\Users\\dgupta\\OneDrive - WatchGuard Technologies Inc\\Desktop\\api\\src\\models\\database.py', reloading
+06-03-2024 15:36:29 INFO     [_internal.py:96]  * Restarting with stat
+06-03-2024 15:36:30 WARNING  [_internal.py:96]  * Debugger is active!
+06-03-2024 15:36:30 INFO     [_internal.py:96]  * Debugger PIN: 826-021-334
+06-03-2024 15:36:33 INFO     [_internal.py:96]  * Detected change in 'C:\\Users\\dgupta\\OneDrive - WatchGuard Technologies Inc\\Desktop\\api\\src\\controllers\\Order\\placeorder.py', reloading
+06-03-2024 15:36:33 INFO     [_internal.py:96]  * Restarting with stat
+06-03-2024 15:41:39 INFO     [_internal.py:96] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+06-03-2024 15:41:39 INFO     [_internal.py:96] [33mPress CTRL+C to quit[0m
+06-03-2024 15:41:39 INFO     [_internal.py:96]  * Restarting with stat
+06-03-2024 15:41:41 WARNING  [_internal.py:96]  * Debugger is active!
+06-03-2024 15:41:41 INFO     [_internal.py:96]  * Debugger PIN: 826-021-334
+06-03-2024 15:41:51 INFO     [authenticate.py:43] [REQ4vHjm] : Valid login by user.
+06-03-2024 15:41:51 INFO     [authenticate.py:16] [REQ4vHjm] : User logged in successfully.
+06-03-2024 15:41:51 INFO     [authenticate.py:23] [REQ4vHjm] : Login route accessed by user.
+06-03-2024 15:41:51 INFO     [_internal.py:96] 127.0.0.1 - - [06/Mar/2024 15:41:51] "POST /login HTTP/1.1" 200 -
+06-03-2024 15:42:14 INFO     [_internal.py:96] 127.0.0.1 - - [06/Mar/2024 15:42:14] "[35m[1mPOST /signup HTTP/1.1[0m" 201 -
+06-03-2024 15:43:13 INFO     [_internal.py:96] 127.0.0.1 - - [06/Mar/2024 15:43:13] "GET /account HTTP/1.1" 200 -
+06-03-2024 15:43:31 INFO     [_internal.py:96] 127.0.0.1 - - [06/Mar/2024 15:43:31] "PUT /account HTTP/1.1" 200 -
+11-03-2024 10:36:19 INFO     [_internal.py:96] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+11-03-2024 10:36:19 INFO     [_internal.py:96] [33mPress CTRL+C to quit[0m
+11-03-2024 10:36:19 INFO     [_internal.py:96]  * Restarting with stat
+11-03-2024 10:36:20 WARNING  [_internal.py:96]  * Debugger is active!
+11-03-2024 10:36:20 INFO     [_internal.py:96]  * Debugger PIN: 826-021-334
+11-03-2024 10:36:37 INFO     [_internal.py:96] 127.0.0.1 - - [11/Mar/2024 10:36:37] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+11-03-2024 10:36:56 INFO     [_internal.py:96] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+11-03-2024 10:36:56 INFO     [_internal.py:96] [33mPress CTRL+C to quit[0m
+11-03-2024 10:36:56 INFO     [_internal.py:96]  * Restarting with stat
+11-03-2024 10:36:57 WARNING  [_internal.py:96]  * Debugger is active!
+11-03-2024 10:36:57 INFO     [_internal.py:96]  * Debugger PIN: 826-021-334
+11-03-2024 10:37:03 INFO     [authenticate.py:43] [REQ9P87Q] : Valid login by user.
+11-03-2024 10:37:03 INFO     [authenticate.py:16] [REQ9P87Q] : User logged in successfully.
+11-03-2024 10:37:03 INFO     [authenticate.py:23] [REQ9P87Q] : Login route accessed by user.
+11-03-2024 10:37:03 INFO     [_internal.py:96] 127.0.0.1 - - [11/Mar/2024 10:37:03] "POST /login HTTP/1.1" 200 -
+11-03-2024 11:01:04 INFO     [_internal.py:96] 127.0.0.1 - - [11/Mar/2024 11:01:04] "[31m[1mPOST /login HTTP/1.1[0m" 422 -
+11-03-2024 11:01:04 INFO     [_internal.py:96] 127.0.0.1 - - [11/Mar/2024 11:01:04] "[31m[1mPOST /login HTTP/1.1[0m" 422 -
+11-03-2024 13:37:42 INFO     [_internal.py:96] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+11-03-2024 13:37:42 INFO     [_internal.py:96] [33mPress CTRL+C to quit[0m
+11-03-2024 13:37:42 INFO     [_internal.py:96]  * Restarting with stat
+11-03-2024 13:37:43 WARNING  [_internal.py:96]  * Debugger is active!
+11-03-2024 13:37:43 INFO     [_internal.py:96]  * Debugger PIN: 826-021-334
+11-03-2024 13:38:34 INFO     [_internal.py:96]  * Detected change in 'C:\\Users\\dgupta\\OneDrive - WatchGuard Technologies Inc\\Desktop\\api\\src\\resources\\authenticate.py', reloading
+11-03-2024 13:38:34 INFO     [_internal.py:96]  * Restarting with stat
+11-03-2024 13:38:45 INFO     [_internal.py:96] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+11-03-2024 13:38:45 INFO     [_internal.py:96] [33mPress CTRL+C to quit[0m
+11-03-2024 13:38:45 INFO     [_internal.py:96]  * Restarting with stat
+11-03-2024 13:38:46 WARNING  [_internal.py:96]  * Debugger is active!
+11-03-2024 13:38:46 INFO     [_internal.py:96]  * Debugger PIN: 826-021-334
+11-03-2024 13:38:53 INFO     [_internal.py:96] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+11-03-2024 13:38:53 INFO     [_internal.py:96] [33mPress CTRL+C to quit[0m
+11-03-2024 13:38:53 INFO     [_internal.py:96]  * Restarting with stat
+11-03-2024 13:38:54 WARNING  [_internal.py:96]  * Debugger is active!
+11-03-2024 13:38:54 INFO     [_internal.py:96]  * Debugger PIN: 826-021-334
+11-03-2024 13:39:26 INFO     [_internal.py:96] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+11-03-2024 13:39:26 INFO     [_internal.py:96] [33mPress CTRL+C to quit[0m
+11-03-2024 13:39:26 INFO     [_internal.py:96]  * Restarting with stat
+11-03-2024 13:39:27 WARNING  [_internal.py:96]  * Debugger is active!
+11-03-2024 13:39:27 INFO     [_internal.py:96]  * Debugger PIN: 826-021-334
+11-03-2024 14:56:06 INFO     [_internal.py:96]  * Detected change in 'C:\\Users\\dgupta\\OneDrive - WatchGuard Technologies Inc\\Desktop\\api\\src\\resources\\product.py', reloading
+11-03-2024 14:56:06 INFO     [_internal.py:96]  * Restarting with stat
+11-03-2024 14:56:08 WARNING  [_internal.py:96]  * Debugger is active!
+11-03-2024 14:56:08 INFO     [_internal.py:96]  * Debugger PIN: 142-839-612
+11-03-2024 14:56:18 INFO     [_internal.py:96]  * Detected change in 'C:\\Users\\dgupta\\OneDrive - WatchGuard Technologies Inc\\Desktop\\api\\src\\resources\\product.py', reloading
+11-03-2024 14:56:18 INFO     [_internal.py:96]  * Restarting with stat
+11-03-2024 14:56:19 WARNING  [_internal.py:96]  * Debugger is active!
+11-03-2024 14:56:19 INFO     [_internal.py:96]  * Debugger PIN: 826-021-334
+11-03-2024 14:56:22 INFO     [_internal.py:96] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+11-03-2024 14:56:22 INFO     [_internal.py:96] [33mPress CTRL+C to quit[0m
+11-03-2024 14:56:22 INFO     [_internal.py:96]  * Restarting with stat
+11-03-2024 14:56:23 WARNING  [_internal.py:96]  * Debugger is active!
+11-03-2024 14:56:23 INFO     [_internal.py:96]  * Debugger PIN: 826-021-334
+11-03-2024 16:55:03 INFO     [_internal.py:96] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+11-03-2024 16:55:03 INFO     [_internal.py:96] [33mPress CTRL+C to quit[0m
+11-03-2024 16:55:03 INFO     [_internal.py:96]  * Restarting with stat
+11-03-2024 16:55:04 WARNING  [_internal.py:96]  * Debugger is active!
+11-03-2024 16:55:04 INFO     [_internal.py:96]  * Debugger PIN: 826-021-334
+11-03-2024 16:55:11 INFO     [authenticate.py:43] [REQCoGeA] : Valid login by user.
+11-03-2024 16:55:11 INFO     [authenticate.py:16] [REQCoGeA] : User logged in successfully.
+11-03-2024 16:55:11 INFO     [authenticate.py:23] [REQCoGeA] : Login route accessed by user.
+11-03-2024 16:55:11 INFO     [_internal.py:96] 127.0.0.1 - - [11/Mar/2024 16:55:11] "POST /login HTTP/1.1" 200 -
+26-03-2024 14:15:00 INFO     [_internal.py:96] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+26-03-2024 14:15:00 INFO     [_internal.py:96] [33mPress CTRL+C to quit[0m
+26-03-2024 14:15:00 INFO     [_internal.py:96]  * Restarting with stat
+26-03-2024 14:15:01 WARNING  [_internal.py:96]  * Debugger is active!
+26-03-2024 14:15:01 INFO     [_internal.py:96]  * Debugger PIN: 826-021-334
+26-03-2024 14:15:18 INFO     [authenticate.py:43] [REQMh2oE] : Valid login by user.
+26-03-2024 14:15:18 INFO     [authenticate.py:16] [REQMh2oE] : User logged in successfully.
+26-03-2024 14:15:18 INFO     [authenticate.py:23] [REQMh2oE] : Login route accessed by user.
+26-03-2024 14:15:18 INFO     [_internal.py:96] 127.0.0.1 - - [26/Mar/2024 14:15:18] "POST /login HTTP/1.1" 200 -
+26-03-2024 14:39:42 INFO     [_internal.py:96] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+26-03-2024 14:39:42 INFO     [_internal.py:96] [33mPress CTRL+C to quit[0m
+26-03-2024 14:39:42 INFO     [_internal.py:96]  * Restarting with stat
+26-03-2024 14:39:43 WARNING  [_internal.py:96]  * Debugger is active!
+26-03-2024 14:39:43 INFO     [_internal.py:96]  * Debugger PIN: 826-021-334
+26-03-2024 14:39:53 INFO     [authenticate.py:43] [REQSGfbs] : Valid login by user.
+26-03-2024 14:39:53 INFO     [authenticate.py:16] [REQSGfbs] : User logged in successfully.
+26-03-2024 14:39:53 INFO     [authenticate.py:23] [REQSGfbs] : Login route accessed by user.
+26-03-2024 14:39:53 INFO     [_internal.py:96] 127.0.0.1 - - [26/Mar/2024 14:39:53] "POST /login HTTP/1.1" 200 -

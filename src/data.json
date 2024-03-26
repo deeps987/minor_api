@@ -1,0 +1,354 @@
+
+{
+    "queries": {
+        "CHECK_CREDENTIALS" : "SELECT username, password FROM authenticate WHERE username = %s "  ,
+
+        "CHECK_ROLE" : "SELECT role, user_id FROM authenticate WHERE username = %s",
+
+        "CHECK_TYPE" : "SELECT role FROM authenticate WHERE user_id = %s",
+
+        "GET_PASSWORD" : "SELECT password FROM authenticate WHERE username = %s",
+
+        "FETCH_DETAILS" : "SELECT name, phone, address, city, state, pincode FROM user WHERE user_id = %s",
+
+        "UPDATE_ADDRESS" : "UPDATE user SET address = %s ,city = %s ,state = %s ,pincode = %s WHERE user_id = %s",
+
+        "UPDATE_PHONE" : "UPDATE user SET phone = %s WHERE user_id =  %s",
+
+        "USERNAME_EXISTS" : "SELECT COUNT(*) FROM authenticate WHERE username = %s",
+
+        "PRODUCT_ID_EXISTS" : "SELECT COUNT(*) FROM product WHERE product_id =  %s",
+
+        "UPDATE_USERNAME" : "UPDATE authenticate SET username = %s WHERE user_id = %s",
+
+
+        "GET_CUSTOMERS" : "SELECT user.* ,authenticate.username FROM user JOIN authenticate ON user.user_id = authenticate.user_id WHERE authenticate.role = 'Customer' ",
+
+        "GET_SELLERS" : "SELECT user.* ,authenticate.username FROM user JOIN authenticate ON user.user_id = authenticate.user_id WHERE authenticate.role = 'Seller' ",
+
+        "CANCEL_PRODUCT_USERNAME" : "DELETE FROM orders WHERE seller_id IN (SELECT user_id FROM authenticate WHERE username = %s)",
+
+        "REMOVE_PRODUCTS_USERNAME" : "DELETE FROM product WHERE user_id IN (SELECT user_id FROM authenticate WHERE username = %s)",
+
+        "REMOVE_USER" : "DELETE FROM user WHERE user_id IN (SELECT user_id FROM authenticate WHERE username = %s)",
+
+        "REMOVE_USER_AUTHENTICATE" : "DELETE FROM authenticate WHERE username = %s",
+
+        "UPDATE_REQUEST_TABLE" : "UPDATE request_delete SET status = 'DELETED' WHERE user_id = %s",
+
+        "ADD_PRODUCT" : "INSERT INTO product(product_id, user_id, description, price, keyword, category, gender, size, quantity) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s)",
+
+        "REMOVE_PRODUCT" : "DELETE FROM product WHERE product_id = %s",
+
+        "LIST_PRODUCTS" : "SELECT * FROM orders WHERE seller_id = %s",
+
+        "GET_PRODUCT_DETAILS" : "SELECT * FROM product WHERE user_id = %s",
+
+        "CHECK_KEYWORD_EXISTS" : "SELECT COUNT(*) FROM product WHERE description LIKE '%' || %s || '%' ",
+
+        "GET_PRODUCTS_WITH_KEYWORD_ASC" : "SELECT * FROM product WHERE description LIKE CONCAT('%', %s, '%') ORDER BY price ASC",
+
+        "GET_PRODUCTS_WITH_KEYWORD_DESC" : "SELECT * FROM product WHERE description LIKE CONCAT('%', %s, '%') ORDER BY price DESC",
+
+        "GET_PRODUCTS_WITH_KEYWORD" : "SELECT * FROM product WHERE category LIKE CONCAT('%', %s, '%')",
+
+        "UPDATE_PRODUCT" : "UPDATE product SET quantity = %s WHERE product_id = %s ",
+
+        "UPDATE_PASSWORD" : "UPDATE authenticate SET password = %s WHERE user_id = %s",
+
+        "REQUEST_DELETE" : "INSERT INTO request_delete (username, status) VALUES (%s, %s)",
+
+        "LIST_REQUESTS" : "SELECT MAX(id) as column1, user_id,  MAX(status) as column2 FROM request_delete WHERE status = %s GROUP BY user_id",
+
+        "LIST_ALL_REQUESTS" : "SELECT * FROM request_delete",
+
+        "PLACE_ORDER" : "INSERT INTO orders(order_id, user_id, username, seller_id, product_id, quantity, payment_mode, status, order_date) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)",
+
+        "CHECK_QUANTITY" : "SELECT quantity FROM product WHERE product_id = %s",
+
+        "NEW_QUANTITY" : "UPDATE product SET quantity = quantity - %s WHERE product_id = %s",
+
+        "VIEW_CUSTOMER_ORDER" : "SELECT * FROM orders WHERE user_id = %s ORDER BY status='PENDING' DESC",
+
+        "VIEW_SELLER_ORDER" : "SELECT * FROM orders WHERE seller_id = %s ORDER BY status='PENDING' DESC",
+
+        "CANCEL_ORDER" : "UPDATE orders SET status = 'CANCELLED' WHERE user_id = %s AND product_id = %s",
+
+        "CANCEL_ORDER_PRODUCT" : "UPDATE orders SET status = 'CANCELLED' WHERE product_id = %s",
+
+        "ADD_AUTHENTICATE" : "INSERT INTO authenticate(username, password, role) VALUES (%s, %s, %s)",
+
+        "ADD_USER" : "INSERT INTO user(user_id, name, phone, address, city, state, pincode) VALUES (%s, %s, %s, %s, %s, %s, %s)",
+
+        "CHECK_PRODUCTID_EXISTS" : "SELECT COUNT(*) FROM product WHERE product_id = %s AND user_id = %s",
+
+        "GET_CANCELLED_QUANTITY" : "SELECT quantity FROM orders WHERE user_id = %s AND status = 'PENDING' ",
+
+        "UPDATE_PRODUCT_CANCELLED" : "UPDATE product SET quantity = quantity + %s WHERE product_id = %s ",
+
+        "PRODUCTS" : "SELECT * FROM product WHERE gender = %s",
+
+        "CHECK_PRODUCT_ID_EXISTS" : "SELECT COUNT(*) FROM orders WHERE product_id = %s AND user_id = %s",
+
+        "CHECK_USERNAME_EXISTS" : "SELECT COUNT(*) FROM request_delete WHERE user_id = %s",
+
+        "LIST_SELLER_PRODUCTS" : "SELECT product_id, description, price, keyword, category, gender, size, quantity FROM product WHERE user_id = %s"
+
+    },
+    "menu" : {
+        "ENTER_MENU" : "Enter:\n 1 to login\n 2 to signup\n 3 to exit: ",
+
+        "SELLER_LOGIN" : "\nEnter:\n 1 to login as customer\n 2 to login as seller\n 3 to exit: ",
+
+        "ADMIN_LOGIN" : "\nEnter:\n 1 to login as customer\n 2 to login as admin\n 3 to exit: ",
+
+        "CUSTOMER_MENU" : "\nEnter:\n 1 to view account\n 2 to update account\n 3 to search product\n 4 to view products\n 5 to place order\n 6 to view order\n 7 to cancel order\n 8 to logout: ",
+
+        "SELLER_MENU" : "\nEnter:\n 1 to add products\n 2 to remove product\n 3 to update product\n 4 to list products\n 5 to check products\n 6 to request delete account\n 7 to view orders\n 8 to logout: ",
+
+        "ADMIN_MENU" : "\nEnter:\n 1 to view users\n 2 to view unique requests\n 3 to view requests\n 4 to delete account\n 5 to logout: ",
+
+        "UPDATE_ACCOUNT" : "\nEnter:\n 1 to update password\n 2 to update address\n 3 to update phone\n 4 to update username\n 5 to exit: ",
+
+        "VIEW_USERS" : "\nEnter:\n 1 to view all customers\n 2 to view all sellers\n 3 to exit: ",
+
+        "UPDATE_QUANTITY" : "\nEnter:\n 1 to update in it\n 2 to exit: ",
+
+        "SELLER_CHOICE" : "\nEnter:\n 1 to view all customer orders\n 2 to view your orders\n 3 to exit: ",
+
+        "GENDER_CHOICE" : "\nEnter:\n 1 to view for female\n 2 for men\n 3 for children\n 4 to exit: ",
+
+        "SEARCH_PRODUCT" : "\nEnter:\n 1 to show products according to low to high price\n 2 to show product according to high to low price\n 3 to just show products without filter\n 4 to exit:  ",
+
+        "UPDATE_PRODUCT" : "\nEnter:\n 1 to update quantity\n 2 to exit: "
+
+
+
+    },
+    "prompts": {
+        "ENTER": "----------------------------WELCOME TO MY CLOTHING STORE-----------------------------------",
+
+        "START": "\nApplication started!",
+
+        "END": "\nApplication ended!",
+
+        "INVALID_CHOICE" : "\nInvalid choice!\n",
+
+        "PASSWORD_CHANGED" : "\nPassword changed successfully!\n",
+
+        "ADDRESS_CHANGED" : "\nAddress changed successfully!\n",
+
+        "USERNAME_CHANGED" : "\nUsername changed successfully!\n",
+
+        "PHONE_NUMBER_CHANGED" : "\nPhone number changed successfully!\n",
+
+        "ACCOUNT_DELETE" : "\nAccount deleted successfully!\n",
+
+        "VALID_CHOICE" : "\nEnter a valid choice!\n",
+
+        "REQUEST_ADDED" : "\nRequest added successfully!\n",
+
+        "REQUEST_MODIFIED" : "\nRequests modified!\n",
+
+        "PRODUCTS_ADDED" : "\nProduct added successfully!\n",
+
+        "PRODUCTS_NOT_ADDED" : "\nProduct not added!\n",
+
+        "PRODUCTS_REMOVED" : "\nProduct removed successfully!\n ",
+
+        "PRODUCTS_NOT_REMOVED" : "\nProduct not removed!\n ",
+
+        "PRODUCT_QUANTITY" : "\nProduct quantity updated!\n",
+
+        "PRODUCT_NOT_QUANTITY" : "\nProduct quantity not updated!\n",
+
+        "ORDER_PLACED" : "\nOrder placed Successfully!",
+
+        "ORDER_NOT_PLACED" : "\nOrder not placed!",
+
+        "NO_ORDER" : "\nNo orders!\n",
+
+        "ORDER_CANCELLED" : "\nOrder cancelled successfully!\n",
+
+        "INVALID_PRODUCT_ID" : "\nInvalid product id!\n",
+
+        "NO_USER_FOUND" : "\nNo such user found!! Please try again.\n",
+
+        "LOGIN_FAILED" : "\nLogin Failed!! Please input valid credentials!!\n",
+
+        "NO_PRODUCT" : "\nNo product found with this keyword!\n",
+
+        "INVALID_VALUE" : "\nInvalid value!\n",
+
+        "ACCOUNT_CREATION_SUCCESSFULL" : "\nAccount created successfully!\n",
+
+        "PHONE_VALIDITY" : "\nYour phone number should contain 10 digits exactly from 0-9 and should not consists of all 0's.\n",
+
+        "VALID_PHONE" : "\nYour phone number is valid!\n",
+
+        "VALID_USERNAME" : "\nValid username!\n",
+
+        "INVALID_USERNAME" : "\nInvalid username or username already exists. Please enter a new valid username. Your username should have '@' and '.' in it.\n",
+
+        "VALID_PRODUCT_ID" : "\nThe product ID is valid and unique!\n",
+
+        "INVALID_PRODUCT" : "\nInvalid product ID or product ID already exists. Please enter a valid and unique 6-digit integer.\n",
+
+        "VALID_CATEGORY" : "\nEnter a valid category!\n",
+
+        "VALID_GENDER" : "\nEnter a valid gender!\n",
+
+        "INVALID_INPUT" : "\nInvalid input. Please enter a valid double value.\n",
+
+        "INVALID_INTEGER" : "\nInvalid input. Please enter a valid integer.\n",
+
+        "PASSWORD_VALIDITY" : "\nYour password should contain ATLEAST ONE UPPER CASE, ONE LOWER CASE and INTEGER VALUES and the LENGTH should be ATLEAST 6.\n",
+
+        "VALID_PASSWORD" : "\nValid password!\n",
+
+        "INVALID_QUANTITY" : "\nInvalid quantity!\n",
+
+        "THANKYOU_LOGIN" : "\nThankyou for logging in!\n",
+
+        "VALID_PINCODE" : "\nYour pincode is valid!\n",
+
+        "PINCODE_VALIDITY" : "\nThe pincode should contain only 6 digits and it should not be all 0's.\n",
+
+        "NO_PRODUCT_FOUND" : "\nNo products found!\n",
+
+        "INVALID_SIZE" : "\nThe size you entered is invalid!\n",
+
+        "NO_USERS" : "\nNo users!\n",
+
+        "NO_REQUESTS" : "\nNo Requests Found!\n",
+
+        "INVALID_ROLE_ENTERED" : "\nInvalid role entered!\n",
+
+        "ADDRESS_CHOICE": "Press enter to skip changing address otherwise enter any character to proceed for change: ",
+
+        "DELETE SELLER": "\nEnter seller username which you want to remove: ",
+
+        "SELLER_DELETED": "\nSeller Deleted!\n",
+
+        "USERNAME_INVALID": "\nThe username you entered is invalid!\n",
+
+        "INVALID_ADDRESS" : "\nInavlid address format!\n",
+
+        "ALPHABET_CHECK": "\nIt should consists of Alphabets only!\n"
+
+
+    },
+    "inputs": {
+        "CREDENTIALS_STATEMENT" : "\nEnter your credentials to login! ",
+
+        "CREDENTIALS_USERNAME" : "\nEnter your username: ",
+
+        "PHONE" : "\nEnter new phone number: ",
+
+        "NEW_USERNAME" : "\nEnter a new username: ",
+
+        "PRODUCT_ID" : "\nEnter a 6-digit product ID: ",
+
+        "CATEGORY" : "\nEnter category ('Ethnic', 'Casual', 'Party', 'Formal', 'Nightwear'): ",
+
+        "GENDER" : "\nEnter gender ('Men', 'Women', 'Kids'): ",
+
+        "PRICE" : "\nEnter a price: ",
+
+        "SIZE" : "\nEnter size (S, M, L, XL, XXL, XXL): ",
+
+        "USER_INPUT" : "\nEnter quantity: ",
+
+        "QUANTITY" : "\nEnter quantity: ",
+
+        "DESCRIPTION" : "\nEnter description for the product: ",
+
+        "KEYWORD" : "\nEnter keyword: ",
+
+        "NAME" : "\nEnter your name: ",
+
+        "ADDRESS" : "\nEnter the address: ",
+
+        "CITY" : "\nEnter city: ",
+
+        "STATE" : "\nEnter state: ",
+
+        "PINCODE" : "\nEnter the pincode: ",
+
+        "YOUR_CHOICE" : "\nEnter your choice : ",
+
+        "ENTER_ROLE" : "\nEnter role (Customer/Seller): "
+
+    },
+
+    "constant" : {
+        "PRODUCT" : "",
+
+        "ORDER_ID": "Order Id",
+
+        "USER_ID" : "User_id",
+
+        "PRODUCT_ID" : "Product Id",
+
+        "QUANTITY" : "Quantity",
+
+        "STATUS" : "Status",
+
+        "ORDER_DATE" : "Order Date",
+
+        "PENDING" : "PENDING",
+
+        "COD" : "COD",
+
+        "DESCRIPTION" : "Description",
+
+        "PRICE" : "Price",
+
+        "CATEGORY" : "Category",
+
+        "GENDER" : "Gender",
+
+        "SIZE" : "Size",
+
+        "NAME" : "Name",
+
+        "USERNAME" : "Username",
+
+        "PHONE" : "Phone",
+
+        "ADDRESS" : "Address",
+
+        "CITY" : "City",
+
+        "STATE" : "State",
+
+        "PINCODE" : "Pincode",
+
+        "ID" : "Id",
+
+        "CUSTOMER" : "Customer",
+
+        "SELLER" : "Seller",
+
+        "ONE": "1",
+
+        "TWO": "2",
+
+        "THREE" : "3",
+
+        "FOUR" : "4",
+
+        "FIVE" : "5",
+
+        "SIX" : "6",
+
+        "SEVEN" : "7",
+
+        "EIGHT" : "8"
+
+
+
+
+
+    }
+}
